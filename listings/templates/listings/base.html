@@ -9,6 +9,12 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <nav>
+        <a href="{% url 'band-list' %}">Groupes</a>
+        <a href="{% url 'listing-list' %}">Annonces</a>
+        <a href="{% url 'contact-us' %}">Contactez-nous</a>
+    </nav>
+   
     {% block content %}{% endblock %}
 </body>
 </html>

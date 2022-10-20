@@ -6,10 +6,11 @@
 
 {% block content %}
     <h1>Voici mes Listings préférés</h1>
+    <a href="{% url 'listing-create' %}">Créer une nouvelle annonce</a>
     
     {% for listing in listings %}
 
-    <li> {{ listing.title }} </li>
+    <li><a href="{% url 'listing-detail' listing.id %}"> {{ listing.title }} </a></li>
 
     {% endfor %}
 {% endblock %}
